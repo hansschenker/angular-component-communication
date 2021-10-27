@@ -1,0 +1,13 @@
+<input #search type="text" (input)="svc.searchState.next(search.value)" placeholder="Filter items..." />
+<div>
+  <label>You search for:</label>
+  {{ svc.searchChanges | async  | json }}
+</div>
+<div>
+  <label>search items</label>
+  {{ svc.searchItemsChanges  | async  | json  }}
+</div>
+<div>
+  <label>filtered items</label>
+  {{ svc.searchItemsFilteredChanges | async  | json  }}
+</div>
